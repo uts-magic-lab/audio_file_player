@@ -1,0 +1,13 @@
+# Path to the audio file
+string filepath
+---
+# Result information
+# If it was successful
+bool success
+# If it wasn't reason why it wasn't
+string reason
+# Total time the file was playing
+time total_time
+---
+# Feedback about the amount of time the audio has been played
+time elapsed_played_time

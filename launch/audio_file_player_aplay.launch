@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="audio_file_player" name="audio_file_player" type="play_file_server.py" output="screen">
+        <!-- Parameters to change the player to use other commands, flags and the rate (Hz) at which
+        the feedback is published, this is equivalent to the default configuration -->
+        <param name="command" value="aplay"/>
+        <param name="flags" value=""/>
+        <param name="feedback_rate" value="10"/>
+    </node>
+</launch>
