@@ -28,7 +28,7 @@ Try the actionlib interface:
 If you want to use your own command for playing the files (or even use this node for some other
 purpose) just modify the launch file to use the command and flags that you want:
 
-````
+````xml
 <launch>
     <node pkg="audio_file_player" name="audio_file_player" type="play_file_server.py" output="screen">
         <!-- Parameters to change the player to use other commands, flags and the rate (Hz) at which
