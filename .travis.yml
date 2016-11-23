@@ -1,6 +1,6 @@
 sudo: required
 dist: trusty
-#language: generic
+language: generic
 env:
   - ROS_DISTRO=indigo
 
