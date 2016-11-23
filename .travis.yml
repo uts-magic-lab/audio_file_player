@@ -1,21 +1,8 @@
 sudo: required
-dist: 
-  #- precise
-  - trusty
+dist: trusty
 language: generic
 env:
   - ROS_DISTRO=indigo
-  #- ROS_DISTRO=hydro
-# services:
-#   - docker
-
-# script:
-#   - wget -O- http://travis.debian.net/script.sh | sh -
-
-# branches:
-#   except:
-#     - /^debian\/\d/
-
 
 # Install system dependencies, namely ROS.
 before_install:
