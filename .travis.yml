@@ -17,10 +17,10 @@ before_install:
   - sudo apt-get update -qq
   # Install ROS
   - sudo apt-get install -y python-catkin-pkg python-catkin-tools python-rosdep python-wstool ros-$ROS_DISTRO-catkin python-bloom fakeroot
-#   - source /opt/ros/$ROS_DISTRO/setup.bash
-#   # Setup for rosdep
-#   - sudo rosdep init
-#   - rosdep update
+  - source /opt/ros/$ROS_DISTRO/setup.bash
+  # Setup for rosdep
+  - sudo rosdep init
+  - rosdep update
 
 # # Create a catkin workspace with the package under test.
 # install:
