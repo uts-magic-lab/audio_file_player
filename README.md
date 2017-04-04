@@ -39,3 +39,14 @@ purpose) just modify the launch file to use the command and flags that you want:
     </node>
 </launch>
 ````
+
+# Extra: Volume manager
+You have a tiny node to get and set the volume via a std_msgs/Int8 topic (values 0-100 representing the percentage of volume) in the scripts folder with it's launch file:
+
+    roslaunch audio_file_player volume_manager.launch
+
+By default the topics are:
+```
+    /volume_manager/get_volume
+    /volume_manager/set_volume
+```
