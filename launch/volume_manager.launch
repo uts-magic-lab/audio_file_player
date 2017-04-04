@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="audio_file_player" name="volume_manager" type="volume_manager.py" output="screen">
+    </node>
+</launch>
