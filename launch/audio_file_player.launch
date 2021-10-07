@@ -5,5 +5,8 @@
         <param name="command" value="play"/>
         <param name="flags" value=""/>
         <param name="feedback_rate" value="10"/>
+        <!-- By not wrapping the file path, clients can add flags on 
+        any call, for example '-v 0.5 file/path.wav' -->
+        <param name="wrap_file_path" value="True"/>
     </node>
 </launch>
