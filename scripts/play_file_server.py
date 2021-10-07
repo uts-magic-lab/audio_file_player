@@ -69,10 +69,10 @@ class AudioFilePlayer(object):
         # By default this node plays files using the aplay command
         # Feel free to use any other command or flags
         # by using the params provided
-        self.command = rospy.get_param('~/command', 'play')
-        self.flags = rospy.get_param('~/flags', '')
-        self.wrap_file_path = rospy.get_param('~/wrap_file_path', True)
-        self.feedback_rate = rospy.get_param('~/feedback_rate', 10)
+        self.command = rospy.get_param('~command', 'play')
+        self.flags = rospy.get_param('~flags', '')
+        self.wrap_file_path = rospy.get_param('~wrap_file_path', True)
+        self.feedback_rate = rospy.get_param('~feedback_rate', 10)
         self.afp_as.start()
         # Needs to be done after start
         self.afp_as.register_preempt_callback(self.as_preempt_cb)
