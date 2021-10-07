@@ -71,6 +71,7 @@ class AudioFilePlayer(object):
         # by using the params provided
         self.command = rospy.get_param('~/command', 'play')
         self.flags = rospy.get_param('~/flags', '')
+        self.wrap_file_path = rospy.get_param('~/wrap_file_path', True)
         self.feedback_rate = rospy.get_param('~/feedback_rate', 10)
         self.afp_as.start()
         # Needs to be done after start
@@ -125,7 +126,10 @@ class AudioFilePlayer(object):
         # Replace any ' or " characters with emptyness to avoid bad usage
         audio_file_path = audio_file_path.replace("'", "")
         audio_file_path = audio_file_path.replace('"', '')
-        full_command = self.command + " " + self.flags + " '" + audio_file_path + "'"
+        if self.wrap_file_path:
+            full_command = self.command + " " + self.flags + " '" + audio_file_path + "'"
+        else:
+            full_command = self.command + " " + self.flags + " " + audio_file_path
         rospy.loginfo("Playing audio file: " + str(audio_file_path) +
                       " with command: " + str(full_command))
         self.current_playing_process = ShellCmd(full_command)
